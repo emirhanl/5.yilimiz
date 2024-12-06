@@ -1,4 +1,5 @@
 /* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -37,15 +38,31 @@ body {
 }
 
 .gallery {
-    display: block; /* Bu kısmı değiştirdik */
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Fotoğraflar arasında boşluk */
+}
+
+.gallery figure {
+    width: 90%; /* Fotoğrafların genişliği ekranın %90'ı */
+    max-width: 600px; /* Maksimum genişlik 600px olacak */
+    margin: 0 auto; /* Ortalamak için */
+    text-align: center;
 }
 
 .gallery img {
-    width: 100%; /* Görselleri tam genişlikte yapar */
-    height: auto; /* Görüntülerin orantısını korur */
+    width: 100%;
+    height: auto;
     display: block;
-    margin-bottom: 20px; /* Görseller arasında boşluk bırakır */
+    border-radius: 10px; /* Köşeleri hafif yuvarlatılmış görüntü için */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekleyerek estetik bir görünüm katıyoruz */
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555; /* Açıklama yazısının rengi */
 }
 
 .message {
@@ -59,4 +76,27 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #ffcccc;
+}
+
+/* Mobil uyumlu stil için */
+@media (max-width: 768px) {
+    .gallery figure {
+        width: 95%; /* Küçük ekranlarda genişliği biraz daha arttırıyoruz */
+    }
+    
+    .hero {
+        padding: 30px;
+    }
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+    
+    #playButton {
+        padding: 8px 16px;
+    }
 }
