@@ -1,70 +1,62 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #fdf4f4;
-    color: #333;
-    text-align: center;
+    background-color: #f3f3f3;
 }
 
 .hero {
-    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
-    padding: 50px 20px;
-    color: white;
+    text-align: center;
+    padding: 50px;
+    background-color: #ffcccc;
 }
 
 .hero h1 {
     font-size: 2.5em;
-    margin: 0;
 }
 
 .hero p {
     font-size: 1.2em;
 }
 
-.hero button {
-    margin-top: 20px;
+#playButton {
+    font-size: 1em;
     padding: 10px 20px;
-    font-size: 1.2em;
-    color: white;
-    background: #ff6f61;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.hero button:hover {
-    background: #e74c3c;
+.content {
+    text-align: center;
+    margin: 50px 0;
 }
 
-.content {
-    padding: 20px;
-    background: white;
+.content h2 {
+    margin-bottom: 20px;
 }
 
 .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    display: block; /* Bu kısmı değiştirdik */
+    width: 100%;
 }
 
 .gallery img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%; /* Görselleri tam genişlikte yapar */
+    height: auto; /* Görüntülerin orantısını korur */
+    display: block;
+    margin-bottom: 20px; /* Görseller arasında boşluk bırakır */
 }
 
 .message {
-    padding: 20px;
-    background: #ffeaa7;
-    color: #2d3436;
+    text-align: center;
+    padding: 30px;
+    background-color: #ffe6e6;
+    margin: 20px 0;
 }
 
 footer {
-    padding: 10px;
-    background: #dfe6e9;
-    color: #636e72;
-    font-size: 0.9em;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcccc;
 }
